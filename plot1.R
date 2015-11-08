@@ -29,6 +29,9 @@ colnames(data) <- colNamesVector
 ## convert the Date column to class = Date
 data$Date <- as.Date(data$Date, format = "%d/%m/%Y")
 
+## set global parameters
+par(cex = "0.75") ## set the font size to 75% of default
+
 ## create the histogram plot of Global Active Power on the screen device
 hist(data$Global_active_power, col = "red", xlab = "Global Active Power (kilowatts)", main = "Global Active Power" )
 

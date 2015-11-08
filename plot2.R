@@ -34,6 +34,9 @@ data$Date <- as.Date(data$Date, format = "%d/%m/%Y")
 ## concatenate the Date and Time columns into Date_Time and convert to POSIXct class
 data[, "Date_Time"] <- ymd_hms(paste(data$Date, data$Time))
 
+## set global parameters
+par(cex = "0.75") ## set the font size to 75% of default
+
 ## create the X-Y plot of Date-Time versus Global Active Power on the screen device
 plot(data$Date_Time, data$Global_active_power, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)")
 
