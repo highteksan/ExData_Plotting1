@@ -55,7 +55,6 @@ legend("topright", bty = "n", lty = "solid", col = c("black", "red", "blue"), le
 ## add the fourth plot - Global reactive power versus time
 plot(data$Date_Time, data$Global_reactive_power, type = "l", xlab = "datetime", ylab = "Global_reactive_power")
 
-
 ## copy the screen plot to the png file
 dev.copy(png, file = "plot4.png")
 dev.off()
